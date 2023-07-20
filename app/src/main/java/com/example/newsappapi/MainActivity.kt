@@ -1,7 +1,6 @@
 package com.example.newsappapi
 
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.newsappapi.API.ApiClient
@@ -20,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var binding = ActivityMainBinding.inflate(layoutInflater)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
@@ -28,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         Apiinterface.getNews(
             "tesla",
-            "2023-06-19",
+            "2023-06-20",
             "publishedAt",
             "26ffdb5c703246d2ab717ceee3bd0cc4"
         ).enqueue(object : Callback<NewsModel> {
@@ -38,7 +37,6 @@ class MainActivity : AppCompatActivity() {
                 adapter = NewsAdapter(List)
                 binding.rcvNews.layoutManager = GridLayoutManager(this@MainActivity, 1)
                 binding.rcvNews.adapter = adapter
-                binding.rcvNews.visibility = View.GONE
 
             }
 
