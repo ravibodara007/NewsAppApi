@@ -1,6 +1,6 @@
 package com.example.newsappapi.Interface
 
-import com.example.newsappapi.Modal.NewsModal
+import com.example.newsappapi.Modal.NewsModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -14,5 +14,5 @@ interface ApiInterface {
         @Query("sortBy") sortBy:String,
         @Query("apiKey") apiKey:String,
 
-    ): Call<NewsModal>
+    ): Call<NewsModel>
 }

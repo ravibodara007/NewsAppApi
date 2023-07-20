@@ -1,9 +1,20 @@
 package com.example.newsappapi.Modal
 
 import com.google.gson.annotations.SerializedName
-import javax.xml.transform.Source
 
-data class NewsModal(
+data class NewsModel(
+
+	@field:SerializedName("totalResults")
+	val totalResults: Int? = null,
+
+	@field:SerializedName("articles")
+	val articles: List<ArticlesItem?>? = null,
+
+	@field:SerializedName("status")
+	val status: String? = null
+)
+
+data class ArticlesItem(
 
 	@field:SerializedName("publishedAt")
 	val publishedAt: String? = null,
@@ -28,4 +39,13 @@ data class NewsModal(
 
 	@field:SerializedName("content")
 	val content: String? = null
+)
+
+data class Source(
+
+	@field:SerializedName("name")
+	val name: String? = null,
+
+	@field:SerializedName("id")
+	val id: Any? = null
 )

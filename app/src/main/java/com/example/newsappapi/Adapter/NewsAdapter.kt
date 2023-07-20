@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
-import com.example.newsappapi.Modal.NewsModal
+import com.example.newsappapi.Modal.ArticlesItem
 import com.example.newsappapi.databinding.NewsViewBinding
 
-class NewsAdapter(List: ArrayList<NewsModal>) : RecyclerView.Adapter<NewsAdapter.NewsHolder>() {
+class NewsAdapter(List: ArrayList<ArticlesItem>) : RecyclerView.Adapter<NewsAdapter.NewsHolder>() {
 
     lateinit var context: Context
     var List = List
